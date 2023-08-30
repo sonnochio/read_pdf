@@ -1,11 +1,15 @@
 import pdfplumber
 import json
 import os
+import sys
 #extract text from a pdf and store each page as a list item
 #/Volumes/Extreme SSD/Quest Labs/project_gmail/project_gmail/generated_cvs
 
 def main():
-    dir=input('input the pdf directory \n')
+
+    argv = sys.argv[1]
+    
+    print("Path of the PDF:", argv)
     if not dir:
         print('Nothing entered, converting all pdfs in the current directory into JSON')
         dir='.'
